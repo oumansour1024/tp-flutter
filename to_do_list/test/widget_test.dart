@@ -1,30 +1,29 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:to_do_list/main.dart';
+import 'package:to_do_list/main.dart'; // Assurez-vous que le nom du package est correct
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Test d\'ajout de tâche dans la To-Do List', (WidgetTester tester) async {
+    // 1. Charger l'application
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // 2. Vérifier que le message "Aucune tâche" est présent au début
+    expect(find.textContaining('Aucune tâche'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // 3. Appuyer sur le bouton '+' pour ouvrir la page d'ajout
+    await tester.tap(find.byType(FloatingActionButton));
+    await tester.pumpAndSettle(); // Attendre la fin de l'animation de transition
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // 4. Saisir un titre et une description
+    await tester.enterText(find.widgetWithText(TextField, 'Titre'), 'Acheter du lait');
+    await tester.enterText(find.widgetWithText(TextField, 'Description'), 'Au supermarché');
+
+    // 5. Cliquer sur le bouton 'Enregistrer la tâche'
+    await tester.tap(find.text('Enregistrer la tâche'));
+    await tester.pumpAndSettle(); // Revenir à l'écran principal
+
+    // 6. Vérifier que la tâche apparaît maintenant dans la liste
+    expect(find.text('Acheter du lait'), findsOneWidget);
+    expect(find.textContaining('Au supermarché'), findsOneWidget);
   });
 }
