@@ -1,0 +1,77 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter analyze
+
+## exception
+
+_Exception: Exception: analysis server exited with code -1073740791 and output:
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\flutter_secure_storage\\intermediates\\merged_manifest\\debug\\processDebugManifest\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\jni\\intermediates\\aapt_friendly_merged_manifests\\debug\\processDebugManifest\\aapt\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\jni\\intermediates\\merged_manifest\\debug\\processDebugManifest\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\jni_flutter\\intermediates\\aapt_friendly_merged_manifests\\debug\\processDebugManifest\\aapt\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\jni_flutter\\intermediates\\merged_manifest\\debug\\processDebugManifest\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\local_auth_android\\intermediates\\aapt_friendly_merged_manifests\\debug\\processDebugManifest\\aapt\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\local_auth_android\\intermediates\\merged_manifest\\debug\\processDebugManifest\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\shared_preferences_android\\intermediates\\aapt_friendly_merged_manifests\\debug\\processDebugManifest\\aapt\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\shared_preferences_android\\intermediates\\merged_manifest\\debug\\processDebugManifest\\AndroidManifest.xml","errors":[]}}
+[stdout] {"event":"analysis.errors","params":{"file":"e:\\ProjectAll\\P0023_Flutter\\smart_events_management_system\\build\\url_launcher_android\\intermediates\\aapt_friendly_merged_manifests\\debug\\processDebugManifest\\aapt\\AndroidManifest.xml","errors":[]}}
+[stderr] ../../runtime/vm/zone.cc: 96: error: Out of memory.
+[stderr] version=3.11.4 (stable) (Tue Mar 24 01:02:20 2026 -0700) on "windows_x64"
+[stderr] pid=18876, thread=23964, isolate_group=kernel-service(000001E51360A090), isolate=(nil)(0000000000000000)
+[stderr] os=windows, arch=x64, comp=no, sim=no
+[stderr] isolate_instructions=1e51db90000, vm_instructions=7ff7d65e8400
+[stderr] fp=e0ab7fdfa0, sp=e0ab7fdf58, pc=7ff7d68ccca3
+[stderr]   pc 0x00007ff7d68ccca3 fp 0x000000e0ab7fdfa0 C:\Users\iscso\develop\flutter\bin\cache\dart-sdk\bin\dartvm.exe+0x2ecca3
+[stderr] -- End of DumpStackTrace
+[stderr] ../../runtime/vm/zone.cc: 96: error: Out of memory.
+[stderr] Aborting reentrant request for stack trace.
+
+```
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.41.6, on Microsoft Windows [Version 10.0.26200.8246], locale en-CA) [2.1s]
+    • Flutter version 3.41.6 on channel stable at C:\Users\iscso\develop\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision db50e20168 (7 weeks ago), 2026-03-25 16:21:00 -0700
+    • Engine revision 425cfb54d0
+    • Dart version 3.11.4
+    • DevTools version 2.54.2
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
+
+[✓] Windows Version (Windows 11 or higher, 25H2, 2009) [10.2s]
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.1.0) [17.8s]
+    • Android SDK at C:\Users\iscso\AppData\Local\Android\sdk
+    • Emulator version 36.3.10.0 (build_id 14472402) (CL:N/A)
+    • Platform android-36, build-tools 36.1.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.8+-14196175-b1038.72)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web [80ms]
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✗] Visual Studio - develop Windows apps [75ms]
+    ✗ Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[✓] Connected device (4 available) [3.8s]
+    • SM A346B (mobile) • RZCW51EQ1YZ • android-arm64  • Android 16 (API 36)
+    • Windows (desktop) • windows     • windows-x64    • Microsoft Windows [Version 10.0.26200.8246]
+    • Chrome (web)      • chrome      • web-javascript • Google Chrome 148.0.7778.97
+    • Edge (web)        • edge        • web-javascript • Microsoft Edge 148.0.3967.54
+
+[✓] Network resources [1,203ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```
